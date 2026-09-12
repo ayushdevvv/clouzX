@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #03070f;
+  color: #e7ecf5;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a2d4a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #24406b;
+}
+
+.progress-track {
+  background-color: #1a2d4a;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #d4af37, #e8c766);
+}
+
+.glass-panel {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-strong {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skeleton-shimmer {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.08) 40px,
+    rgba(255, 255, 255, 0.03) 80px
+  );
+  background-size: 800px 100%;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #f2d385, #d4af37 60%, #a4802a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-brand {
+  background: linear-gradient(135deg, #6fd4ff, #3b6ef6 55%, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* CLOUZX signature upload action - used for every upload entry point
+   (navbar, upload modal, empty-state CTA, mobile) so the CTA always
+   reads as the same brand action. */
+.btn-cz-upload {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4fd0ff 0%, #3b6ef6 55%, #8b5cf6 100%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 4px 18px -6px rgba(90, 108, 255, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.btn-cz-upload:hover:not(:disabled) {
+  filter: brightness(1.07);
+  box-shadow: 0 8px 26px -6px rgba(90, 108, 255, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.btn-cz-upload:active:not(:disabled) {
+  transform: translateY(0);
+  filter: brightness(0.96);
+}
+
+.btn-cz-upload:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Premium overview surfaces */
+.cz-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cz-icon-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cz-nav-active {
+  background: linear-gradient(135deg, rgba(79, 208, 255, 0.16), rgba(139, 92, 246, 0.16));
+  border: 1px solid rgba(120, 150, 255, 0.25);
+  color: #ffffff;
+}
+
+.cz-upgrade-card {
+  background: linear-gradient(150deg, rgba(79, 208, 255, 0.14), rgba(59, 110, 246, 0.12) 55%, rgba(139, 92, 246, 0.14));
+  border: 1px solid rgba(139, 158, 255, 0.25);
+}
+
+.cz-search {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cz-search:focus-within {
+  border-color: rgba(120, 150, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.cz-table-row {
+  transition: background-color 0.15s ease;
+}
+
+.cz-table-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.cz-donut-ring {
+  filter: drop-shadow(0 0 18px rgba(79, 208, 255, 0.18));
+}
+
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.08), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(59, 130, 246, 0.06), transparent 40%);
+}
