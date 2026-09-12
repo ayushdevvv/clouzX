@@ -6,7 +6,6 @@ import Pricing from "./pages/Pricing.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
-import MyFiles from "./pages/MyFiles.jsx";
 import Starred from "./pages/Starred.jsx";
 import Shared from "./pages/Shared.jsx";
 import Duplicates from "./pages/Duplicates.jsx";
@@ -43,14 +42,6 @@ function App(props) {
           element={
             <ProtectedRoute>
               <Dashboard />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/dashboard/files"
-          element={
-            <ProtectedRoute>
-              <MyFiles />
             </ProtectedRoute>
           }
         />

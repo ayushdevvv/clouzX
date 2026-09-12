@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Check, ArrowRight, Twitter, Github } from "lucide-react";
+import { Check, Twitter, Github } from "lucide-react";
 import MarketingNavbar from "../components/MarketingNavbar.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
 import toast from "react-hot-toast";
@@ -76,7 +76,6 @@ function Pricing(props) {
               className="flex items-center justify-center gap-2 btn-cz-upload font-semibold text-xs px-5 py-2.5 rounded-lg"
             >
               {user ? "Go to dashboard" : "Create free account"}
-              <ArrowRight size={13} />
             </Link>
           </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { LayoutGrid, List, Star, Trash2, Image, FileText, Video, Music, Archive, X, Copy, Files, Link2 } from "lucide-react";
+import { LayoutGrid, Star, Trash2, Image, FileText, Video, Music, Archive, X, Copy, Files, Link2 } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { formatBytes } from "../utils/format.js";
 import BrandLink from "./BrandLink.jsx";
@@ -15,7 +15,6 @@ function Sidebar(props) {
 
   const navItems = [
     { to: "/dashboard", label: "Overview", icon: LayoutGrid, end: true },
-    { to: "/dashboard/files", label: "My Files", icon: List, end: false },
     { to: "/dashboard/starred", label: "Starred", icon: Star, end: false },
     { to: "/dashboard/shared", label: "Shared", icon: Link2, end: false },
     { to: "/dashboard/duplicates", label: "Duplicates", icon: Copy, end: false },
@@ -24,11 +23,11 @@ function Sidebar(props) {
   ];
 
   const categoryItems = [
-    { to: "/dashboard/files?category=image", label: "Images", icon: Image },
-    { to: "/dashboard/files?category=video", label: "Videos", icon: Video },
-    { to: "/dashboard/files?category=document", label: "Documents", icon: FileText },
-    { to: "/dashboard/files?category=audio", label: "Audio", icon: Music },
-    { to: "/dashboard/files?category=archive", label: "Archives", icon: Archive },
+    { to: "/dashboard?category=image", label: "Images", icon: Image },
+    { to: "/dashboard?category=video", label: "Videos", icon: Video },
+    { to: "/dashboard?category=document", label: "Documents", icon: FileText },
+    { to: "/dashboard?category=audio", label: "Audio", icon: Music },
+    { to: "/dashboard?category=archive", label: "Archives", icon: Archive },
   ];
 
   function handleNavClick() {

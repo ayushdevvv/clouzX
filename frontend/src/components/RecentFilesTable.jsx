@@ -32,12 +32,9 @@ function RecentFilesTable(props) {
     <div className="cz-card rounded-xl p-4 sm:p-5 h-full">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-sm font-semibold text-white">Recent Files</h3>
-        <Link
-          to="/dashboard/files"
-          title="View all files"
-          className="flex items-center justify-center w-7 h-7 rounded-lg text-brand-cyan hover:bg-white/5 hover:gap-0.5 transition-all"
-        >
-          <ArrowRight size={15} />
+        <Link to="/dashboard" className="flex items-center gap-1 text-xs text-brand-cyan hover:gap-1.5 transition-all">
+          View all
+          <ArrowRight size={12} />
         </Link>
       </div>
 

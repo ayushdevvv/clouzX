@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   CloudUpload,
-  ArrowRight,
-  ArrowUpRight,
   Folder,
   Search,
   Link2,
@@ -165,18 +163,30 @@ function Landing(props) {
       <section id="overview" className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-14 xl:pt-20 pb-24 sm:pb-32 scroll-mt-24">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-12 xl:gap-16 items-center">
           <div>
-            <span className="inline-flex items-center gap-2 text-xs font-semibold text-gray-300 bg-white/5 border border-white/10 rounded-full px-3.5 py-1.5 mb-6">
+            <span
+              className="inline-flex items-center gap-2 text-xs font-semibold text-gray-300 bg-white/5 border border-white/10 rounded-full px-3.5 py-1.5 mb-6 animate-fadeIn"
+              style={{ animationDelay: "0ms", animationFillMode: "backwards" }}
+            >
               <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span>
               Modern Cloud Storage
             </span>
-            <h1 className="font-display text-4xl sm:text-5xl xl:text-6xl font-bold leading-[1.08]">
+            <h1
+              className="font-display text-4xl sm:text-5xl xl:text-6xl font-bold leading-[1.08] animate-fadeIn"
+              style={{ animationDelay: "100ms", animationFillMode: "backwards" }}
+            >
               Your files, <span className="text-gradient-brand">understood.</span>
             </h1>
-            <p className="text-gray-400 mt-6 text-base sm:text-lg leading-relaxed max-w-md">
+            <p
+              className="text-gray-400 mt-6 text-base sm:text-lg leading-relaxed max-w-md animate-fadeIn"
+              style={{ animationDelay: "200ms", animationFillMode: "backwards" }}
+            >
               CLOUZX helps you store, organize, find and share your files with intelligent insights and
               modern tools.
             </p>
-            <div className="mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <div
+              className="mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 animate-fadeIn"
+              style={{ animationDelay: "300ms", animationFillMode: "backwards" }}
+            >
               <Link
                 to="/register"
                 className="flex items-center justify-center gap-2 btn-cz-upload text-sm font-semibold px-6 py-3 rounded-lg transition-colors"
@@ -189,17 +199,18 @@ function Landing(props) {
                 className="flex items-center justify-center gap-2 border border-white/15 hover:border-white/30 px-6 py-3 rounded-lg font-medium text-sm text-gray-200 transition-colors"
               >
                 Explore CLOUZX
-                <ArrowRight size={15} />
               </a>
             </div>
           </div>
 
-          <OverviewPreview />
+          <div className="animate-fadeIn" style={{ animationDelay: "250ms", animationFillMode: "backwards" }}>
+            <OverviewPreview />
+          </div>
         </div>
       </section>
 
       <section id="features" className="relative max-w-6xl mx-auto px-4 sm:px-6 pb-24 sm:pb-32 scroll-mt-24">
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 animate-fadeIn" style={{ animationFillMode: "backwards" }}>
           <span className="inline-block text-xs font-semibold tracking-[0.2em] text-brand-cyan uppercase bg-brand-cyan/10 border border-brand-cyan/20 rounded-full px-3.5 py-1.5 mb-5">
             Everything you need
           </span>
@@ -211,24 +222,24 @@ function Landing(props) {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5">
-          {FEATURES.map(function (feature) {
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {FEATURES.map(function (feature, index) {
             const Icon = feature.icon;
             return (
-              <div key={feature.title} className="cz-card rounded-2xl p-5 flex flex-col">
+              <div
+                key={feature.title}
+                className="cz-card rounded-2xl p-6 flex flex-col animate-fadeIn"
+                style={{ animationDelay: index * 80 + "ms", animationFillMode: "backwards" }}
+              >
                 <div className="cz-icon-tile mb-4 bg-gradient-to-br from-brand-cyan/15 to-brand-violet/15 text-brand-cyan">
                   <Icon size={18} />
                 </div>
                 <h3 className="font-display text-base font-bold text-white mb-1.5">{feature.title}</h3>
                 <p className="text-xs text-gray-500 leading-relaxed mb-4">{feature.desc}</p>
 
-                <div className="mt-auto mb-4">
+                <div className="mt-auto">
                   <FeaturePreview kind={feature.preview} />
                 </div>
-
-                <button className="w-8 h-8 rounded-lg border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-white/25 transition-colors">
-                  <ArrowUpRight size={14} />
-                </button>
               </div>
             );
           })}

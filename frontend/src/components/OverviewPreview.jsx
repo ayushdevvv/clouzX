@@ -15,9 +15,6 @@ import {
   Video,
   Layers,
   MoreVertical,
-  X,
-  Settings,
-  ArrowRight,
 } from "lucide-react";
 
 const SIDEBAR_ITEMS = [
@@ -82,55 +79,6 @@ const TIMELINE_ITEMS = [
 function OverviewPreview(props) {
   return (
     <div className="relative">
-      {/* Floating: File Insights - top-left corner of the panel */}
-      <div className="hidden xl:block absolute -top-14 -left-14 w-48 glass-panel-strong bg-panel/95 rounded-xl p-3.5 shadow-card z-20 animate-fadeIn">
-        <div className="flex items-center justify-between mb-2.5">
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-gray-300">
-            <FileText size={13} className="text-brand-cyan" />
-            File Insights
-          </div>
-          <X size={12} className="text-gray-600" />
-        </div>
-        <div className="flex items-center gap-2.5 bg-white/[0.03] border border-white/10 rounded-lg p-2">
-          <span className="w-7 h-7 rounded-md bg-raised/70 flex items-center justify-center shrink-0">
-            <FileText size={13} className="text-gray-400" />
-          </span>
-          <div className="min-w-0">
-            <p className="text-[11px] text-gray-200 truncate">Project-Notes.pdf</p>
-            <p className="text-[10px] text-gray-500 truncate">Documents · PDF</p>
-          </div>
-        </div>
-        <p className="text-[10px] text-gray-500 mt-2">Academic · Notes · PDF</p>
-      </div>
-
-      {/* Floating: Secure Sharing - top-right corner of the panel */}
-      <div className="hidden xl:block absolute -top-14 -right-14 w-52 glass-panel-strong bg-panel/95 rounded-xl p-3.5 shadow-card z-20 animate-fadeIn">
-        <div className="flex items-center justify-between mb-2.5">
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-gray-300">
-            <Link2 size={13} className="text-brand-violet" />
-            Secure Sharing
-          </div>
-          <X size={12} className="text-gray-600" />
-        </div>
-        <p className="text-[11px] text-emerald-400 font-medium mb-1">Link active</p>
-        <p className="text-[10px] text-gray-500 mb-2.5">Anyone with the link can view</p>
-        <button className="flex items-center gap-1.5 text-[11px] text-gray-300 border border-white/10 rounded-lg px-2.5 py-1.5 w-full justify-center hover:bg-white/5 transition-colors">
-          <Settings size={11} />
-          Manage
-        </button>
-      </div>
-
-      {/* Floating: Screenshot.png - bottom-right corner of the panel */}
-      <div className="hidden xl:flex absolute -bottom-14 -right-14 w-44 items-center gap-2.5 glass-panel-strong bg-panel/95 rounded-xl p-3 shadow-card z-20 animate-fadeIn">
-        <span className="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-cyan/20 to-brand-violet/20 border border-white/10 flex items-center justify-center shrink-0">
-          <ImageIcon size={15} className="text-brand-cyan" />
-        </span>
-        <div className="min-w-0">
-          <p className="text-[11px] text-gray-200 truncate">Screenshot.png</p>
-          <p className="text-[10px] text-gray-500">1.2 MB</p>
-        </div>
-      </div>
-
       {/* Main overview panel - mirrors the real dashboard: navbar + sidebar + stat cards + recent files + timeline */}
       <div className="glass-panel-strong bg-panel/80 shadow-glow-brand rounded-2xl overflow-hidden">
         <div className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 border-b border-white/5">
@@ -220,10 +168,7 @@ function OverviewPreview(props) {
               <div className="cz-card rounded-lg p-2.5">
                 <div className="flex items-center justify-between mb-2">
                   <p className="text-[11px] font-semibold text-gray-300">Recent Files</p>
-                  <span className="flex items-center gap-1 text-[10px] text-brand-cyan">
-                    View all
-                    <ArrowRight size={9} />
-                  </span>
+                  <span className="text-[10px] text-brand-cyan">View all</span>
                 </div>
                 <div className="space-y-1.5">
                   {RECENT_FILES.map(function (file) {
@@ -249,10 +194,7 @@ function OverviewPreview(props) {
               <div className="cz-card rounded-lg p-2.5">
                 <div className="flex items-center justify-between mb-2">
                   <p className="text-[11px] font-semibold text-gray-300">Timeline</p>
-                  <span className="flex items-center gap-1 text-[10px] text-brand-cyan">
-                    View all
-                    <ArrowRight size={9} />
-                  </span>
+                  <span className="text-[10px] text-brand-cyan">View all</span>
                 </div>
                 <div className="relative pl-3">
                   <div className="absolute left-[3px] top-1 bottom-1 w-px bg-white/10"></div>
