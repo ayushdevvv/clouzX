@@ -62,3 +62,4 @@ All routes prefixed with `/api`.
 - **Frontend → Vercel**: set `VITE_API_URL` (with `/api` suffix) and `VITE_GOOGLE_CLIENT_ID`.
 - Add your deployed frontend URL as an authorized JavaScript origin in Google Cloud Console.
 # CI/CD automated test
+automation test
