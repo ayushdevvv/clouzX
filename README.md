@@ -61,3 +61,4 @@ All routes prefixed with `/api`.
 - **Backend → Render**: set all env vars from `.env.example`, including `GROQ_API_KEY`; set `CLIENT_URL` to your deployed frontend.
 - **Frontend → Vercel**: set `VITE_API_URL` (with `/api` suffix) and `VITE_GOOGLE_CLIENT_ID`.
 - Add your deployed frontend URL as an authorized JavaScript origin in Google Cloud Console.
+# CI/CD automated test
