@@ -1,0 +1,16 @@
+services:
+  backend:
+    image: arcane18/clouzx-backend:latest
+    container_name: clouzx-backend
+    env_file:
+      - ./backend/.env
+    ports:
+      - "5000:5000"
+
+  frontend:
+    image: arcane18/clouzx-frontend:latest
+    container_name: clouzx-frontend
+    ports:
+      - "5173:4173"
+    depends_on:
+      - backend
