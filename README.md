@@ -63,3 +63,5 @@ All routes prefixed with `/api`.
 - Add your deployed frontend URL as an authorized JavaScript origin in Google Cloud Console.
 # CI/CD automated test
 automation test
+
+CI/CD automation demo
